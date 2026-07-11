@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal portfolio of El Francis Dela Cruz" />
+  <title>El Francis — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="email" href="mailto:elfrancisdelacruz@gmail.com">elfrancisdelacruz@gmail.com</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <div class="eyebrow">Available for new opportunities</div>
+          <h1 id="hero-title">El Francis<span>Portfolio</span></h1>
+          <div class="hero-portrait">
+            <img src="./img/el.jpg" alt="scary 0_0" />
+          </div>
+          <div class="hero-bottom">
+            <p class="intro">Video editor since 2019, specializing in transforming raw footage into engaging, polished videos with strong storytelling, smooth pacing, and eye-catching edits.</p>
+            <a class="scroll-hint" href="#work">Scroll to explore ↓</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" aria-labelledby="work-title">
+        <h2 class="section-label" id="work-title">Work / 01</h2>
+        <div class="category-heading">
+          <h3>Personal Projects</h3>
+        </div>
+        <div class="video-grid">
+          <figure class="video-card">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" aria-label="Personal project 1">
+                <source src="videos/p-projects/1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">Personal Project 01</span><span class="video-type">Short Form</span></figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" aria-label="Personal project 2">
+                <source src="videos/p-projects/2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">Personal Project 02</span><span class="video-type">Short Form</span></figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" aria-label="Personal project 3">
+                <source src="videos/p-projects/3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">Personal Project 03</span><span class="video-type">Short Form</span></figcaption>
+          </figure>
+        </div>
+
+      </section>
+
+      <section id="about" aria-labelledby="about-title">
+        <div class="about-grid">
+          <h2 class="section-label" id="about-title">About</h2>
+          <div>
+            <p class="about-copy">Since 2019, I’ve shaped footage into videos that feel clear, energetic, and worth watching.</p>
+            <p class="about-note">I specialize in video editing with a strong eye for rhythm, storytelling, and the details that keep an audience engaged, especially in fast-moving short-form content.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <a class="cta" href="https://mail.google.com/mail/?view=cm&fs=1&to=elfrancisdelacruz@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer">Let's talk ↗</a>
+      <span class="copyright">© <span id="year"></span> El Francis</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
