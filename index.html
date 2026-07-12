@@ -10,8 +10,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Custom cursor dot -->
+  <div id="cursor"></div>
+
   <div class="page">
-    <header>
+    <header id="site-header">
       <a class="email" href="mailto:elfrancisdelacruz@gmail.com">elfrancisdelacruz@gmail.com</a>
       <nav aria-label="Main navigation">
         <a href="#work">Work</a>
@@ -23,25 +27,26 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <div class="eyebrow">Available for new opportunities</div>
-          <h1 id="hero-title">El Francis<span>Portfolio</span></h1>
-          <div class="hero-portrait">
-            <img src="./img/el.jpg" alt="scary 0_0" />
+          <!-- hero-anim children are staggered by nth-child -->
+          <div class="eyebrow hero-anim">Available for new opportunities</div>
+          <h1 id="hero-title" class="hero-anim">El Francis<span>Portfolio</span></h1>
+          <div class="hero-portrait hero-anim">
+            <img src="./img/el.jpg" alt="Portrait of El Francis Dela Cruz" />
           </div>
-          <div class="hero-bottom">
+          <div class="hero-bottom hero-anim">
             <p class="intro">Video editor since 2019, specializing in transforming raw footage into engaging, polished videos with strong storytelling, smooth pacing, and eye-catching edits.</p>
-            <a class="scroll-hint" href="#work">Scroll to explore ↓</a>
+            <a class="scroll-hint" href="#work">Explore ↓</a>
           </div>
         </div>
       </section>
 
       <section id="work" aria-labelledby="work-title">
-        <h2 class="section-label" id="work-title">Work / 01</h2>
+        <h2 class="section-label reveal" id="work-title">Work / 01</h2>
         <div class="category-heading">
-          <h3>Personal Projects</h3>
+          <h3 class="reveal">Personal Projects</h3>
         </div>
         <div class="video-grid">
-          <figure class="video-card">
+          <figure class="video-card reveal" data-delay="1">
             <div class="video-frame">
               <video controls playsinline preload="metadata" aria-label="Personal project 1">
                 <source src="videos/p-projects/1.mp4" type="video/mp4" />
@@ -49,7 +54,7 @@
             </div>
             <figcaption class="video-meta"><span class="video-title">Personal Project 01</span><span class="video-type">Short Form</span></figcaption>
           </figure>
-          <figure class="video-card">
+          <figure class="video-card reveal" data-delay="2">
             <div class="video-frame">
               <video controls playsinline preload="metadata" aria-label="Personal project 2">
                 <source src="videos/p-projects/2.mp4" type="video/mp4" />
@@ -57,7 +62,7 @@
             </div>
             <figcaption class="video-meta"><span class="video-title">Personal Project 02</span><span class="video-type">Short Form</span></figcaption>
           </figure>
-          <figure class="video-card">
+          <figure class="video-card reveal" data-delay="3">
             <div class="video-frame">
               <video controls playsinline preload="metadata" aria-label="Personal project 3">
                 <source src="videos/p-projects/3.mp4" type="video/mp4" />
@@ -65,29 +70,182 @@
             </div>
             <figcaption class="video-meta"><span class="video-title">Personal Project 03</span><span class="video-type">Short Form</span></figcaption>
           </figure>
+          <figure class="video-card reveal" data-delay="4">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" aria-label="Personal project 4">
+                <source src="videos/p-projects/4.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">Personal Project 04</span><span class="video-type">Ranking Niche</span></figcaption>
+          </figure>
+          <figure class="video-card reveal" data-delay="5">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" aria-label="Personal project 5">
+                <source src="videos/p-projects/5.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">Personal Project 05</span><span class="video-type">Ranking Niche</span></figcaption>
+          </figure>
+          <figure class="video-card reveal" data-delay="6">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" aria-label="Personal project 6">
+                <source src="videos/p-projects/6.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">Personal Project 06</span><span class="video-type">Ranking Niche</span></figcaption>
+          </figure>
         </div>
 
+        <div class="category-heading" style="margin-top: 80px;">
+          <h3 class="reveal">AMV</h3>
+        </div>
+        <div class="video-grid video-grid--wide">
+          <figure class="video-card reveal" data-delay="1">
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="metadata" aria-label="AMV project 7">
+                <source src="videos/p-projects/7amv.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">AMV 01</span><span class="video-type">AMV Edit</span></figcaption>
+          </figure>
+          <figure class="video-card reveal" data-delay="2">
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="metadata" aria-label="AMV project 8">
+                <source src="videos/p-projects/8amv.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">AMV 02</span><span class="video-type">AMV Edit</span></figcaption>
+          </figure>
+          <figure class="video-card reveal" data-delay="3">
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="metadata" aria-label="AMV project 9">
+                <source src="videos/p-projects/9amv.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">AMV 03</span><span class="video-type">AMV Edit</span></figcaption>
+          </figure>
+          <figure class="video-card reveal" data-delay="4">
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="metadata" aria-label="AMV project 10">
+                <source src="videos/p-projects/10amv.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">AMV 04</span><span class="video-type">AMV Edit</span></figcaption>
+          </figure>
+          <figure class="video-card reveal" data-delay="5">
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="metadata" aria-label="AMV project 11">
+                <source src="videos/p-projects/11amv.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">AMV 05</span><span class="video-type">AMV Edit</span></figcaption>
+          </figure>
+          <figure class="video-card reveal" data-delay="6">
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="metadata" aria-label="AMV project 12">
+                <source src="videos/p-projects/12amv.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="video-meta"><span class="video-title">AMV 06</span><span class="video-type">AMV Edit</span></figcaption>
+          </figure>
+        </div>
       </section>
 
       <section id="about" aria-labelledby="about-title">
         <div class="about-grid">
-          <h2 class="section-label" id="about-title">About</h2>
+          <h2 class="section-label reveal" id="about-title">About</h2>
           <div>
-            <p class="about-copy">Since 2019, I’ve shaped footage into videos that feel clear, energetic, and worth watching.</p>
-            <p class="about-note">I specialize in video editing with a strong eye for rhythm, storytelling, and the details that keep an audience engaged, especially in fast-moving short-form content.</p>
+            <p class="about-copy reveal" data-delay="1">Since 2019, I've shaped footage into videos that feel clear, energetic, and worth watching.</p>
+            <p class="about-note reveal" data-delay="2">I specialize in video editing with a strong eye for rhythm, storytelling, and the details that keep an audience engaged, especially in fast-moving short-form content.</p>
           </div>
         </div>
       </section>
     </main>
 
     <footer id="contact">
-      <a class="cta" href="https://mail.google.com/mail/?view=cm&fs=1&to=elfrancisdelacruz@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer">Let's talk ↗</a>
-      <span class="copyright">© <span id="year"></span> El Francis</span>
+      <a class="cta reveal" href="https://mail.google.com/mail/?view=cm&fs=1&to=elfrancisdelacruz@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer">Let's talk ↗</a>
+      <span class="copyright reveal" data-delay="1">© <span id="year"></span> El Francis</span>
     </footer>
   </div>
 
   <script>
+    /* ── Year ── */
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ── Custom cursor ── */
+    const cursor = document.getElementById('cursor');
+    const canUseCustomCursor = window.matchMedia('(hover: hover) and (pointer: fine)').matches && !prefersReduced;
+    if (canUseCustomCursor) {
+      document.body.classList.add('custom-cursor-active');
+      let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+      let curX = mouseX, curY = mouseY;
+      const LERP = 0.18;
+      document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+      const tickCursor = () => {
+        curX += (mouseX - curX) * LERP;
+        curY += (mouseY - curY) * LERP;
+        cursor.style.transform = `translate3d(${curX}px, ${curY}px, 0) translate(-50%, -50%)`;
+        requestAnimationFrame(tickCursor);
+      };
+      tickCursor();
+      document.querySelectorAll('a, button, .video-card, .hero-portrait').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+      });
+    } else {
+      cursor.remove();
+    }
+
+    /* ── Hero entrance ── */
+    if (!prefersReduced) {
+      const heroAnims = document.querySelectorAll('.hero-anim');
+      // Small delay so the transition fires after paint
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          heroAnims.forEach(el => el.classList.add('visible'));
+        });
+      });
+    } else {
+      document.querySelectorAll('.hero-anim, .reveal').forEach(el => el.classList.add('visible'));
+    }
+
+    /* ── Scroll reveal ── */
+    if (!prefersReduced) {
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealEls.forEach(el => observer.observe(el));
+    }
+
+    /* ── Header hide/show on scroll ── */
+    const header = document.getElementById('site-header');
+    let lastScrollY = 0;
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentY = window.scrollY;
+          if (currentY > lastScrollY && currentY > 120) {
+            header.classList.add('hidden');
+          } else {
+            header.classList.remove('hidden');
+          }
+          lastScrollY = currentY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
   </script>
 </body>
 </html>
